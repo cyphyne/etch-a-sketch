@@ -1,0 +1,1 @@
+Simple drawing application that makes use of DOM manipulation and javascript.
