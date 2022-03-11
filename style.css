@@ -1,17 +1,20 @@
- 
+
 body {
     min-height: 100%;
     background-image: linear-gradient(#0a1722,#02060a);
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
  
  
  header {
      display: flex;
      justify-content: center;
-     margin-top: 15px;
-     color: #3c76b9c4;
-     font-size: 22px;
+     margin-bottom: 35px;
+     color: #365d8ace;
+     font-size: 14px;
+     background-color: rgba(0, 0, 0, 0.822);
+ 
  }
  
 /*Main*/
@@ -20,6 +23,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    margin-top: 50px;
 }
  
 button {
@@ -54,22 +58,19 @@ button.active {
  
  
 .color-dock {
-    width: 45px;
+    width: 150px;
+    display: flex;
+    align-items: center;
     background-color: transparent;
     color: #f2f4f7;
     margin-left: 40px;
-    background-color: #2c4a6dce;
+    background-color: #1c2f44a6;
+    border-radius: 12px;
 }
  
-#color-selector, #recent, #palette {
-    background-color: #2c4a6dce;
-    width: 25px;
-}
- 
-.grid-settings {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+#color-selector {
+    text-align: center;
+    font-size: 15px;
 }
  
  /*Grid*/
@@ -77,10 +78,47 @@ button.active {
  .container {
      width: 700px;
      height: 700px;
-     background-color: white;
-     color: black;
      display: grid;
  }
+ 
+ 
+ /*Grid Options*/
+ 
+ .grid-settings {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 100px;
+}
+ 
+#size-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+ 
+#size-number {
+    color: #3d71ac;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+ 
+ #slider {
+     -webkit-appearance: none;
+     height: 7px;
+     width: 150px;
+     border-radius: 25px;
+     background-color: #2c4a6dce;
+ }
+ 
+#slider,
+#slider::-webkit-slider-thumb,
+#slider::-moz-range-thumb,
+#slider::-ms-thumb {
+    -webkit-appearance: none;
+    background: #3d71ac;
+}
  
  
  /*Footer*/
@@ -89,12 +127,10 @@ button.active {
      display: flex;
      justify-content: center;
      font-size: 15px;
-     margin-top: 25px;
+     margin-top: 35px;
  }
  
  footer, #link, a:visited {
      text-decoration: none;
-     color: #0d1925;
+     color: #142536;
  }
- 
- 
