@@ -4,40 +4,62 @@
   <title>Pixel Art</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class = "header">
+  <header class="header">
     <h1>Pixel Art</h1>
   </header>
-  <div class = "main">
-    <div class = "toolbar">
-        <button id = "pencil" title="Pencil (P)"></button>
-        <button id = "eraser" title="Eraser (E)"></button>
-        <button id = "fill" title="Fill (B)"></button>
-        <button id = "eye-drop" title="Eye-drop Tool (L)"></button>
-        <button id = "undo" title="Undo (Ctrl + Z)"></button>
-        <button id = "redo" title="Redo (Ctrl + Y)"></button>
-        <button id = "clear" title="Clear (Ctrl + Del)"></button>  
+  <div class="main">
+    <div class="toolbar">
+      <button id="pencil" title="Pencil (P)"></button>
+      <button id="airbrush" title="Airbrush (A)"></button>
+      <button id="eraser" title="Eraser (E)"></button>
+      <button id="fill" title="Fill (B)"></button>
+      <button id="undo" title="Undo (Ctrl + Z)"></button>
+      <button id="redo" title="Redo (Ctrl + Y)"></button>
+      <button id="clear" title="Clear (Ctrl + Del)"></button>
     </div>
-    <div class = "container"></div>
-    <div class = "color-dock">
-      <button id = "color-selector"></button>
-      <button id = "recent"></button>
-      <button id = "palette"></button>
+    <div class="container"></div>
+    <div class="color-dock">
+      <div id="color-selector">
+        <p>Color Selector</p>
+        <div id="cp-wrapper">
+          <input type="color" id="color-picker" name="head" value="#000000">
+        </div>
+      </div>
+      <div id="recent">
+        <p> Recently Used</p>
+      </div>
+      <div id="palette">
+        <p>Palette</p>
+      </div>
     </div>
   </div>
-    <div class = "grid-settings">
-      <div id = "size-slider">
-          <p id = "size-number">16 x 16</p>
-          <input id = "slider" type = "range" value = "16" min = "4" max = "64">
+    <div class="grid-settings">
+      <div id="size-slider">
+        <p id="size-value"></p>
+          <input
+            class="slider" id="grid-slider" type="range" value="16" min="4" max="64"
+            onchange="changeGrid(this.value)"
+          />
       </div>
-      <button id = "grid-display" title = "Grid On"></button>
+      <button id="grid-display" title="Grid On"></button>
+      <div id="grid-opacity">
+        <p id="opacity-text"></p>
+        <input class="slider" id="opacity-slider" type="range" value="100" min="0" max="100"/>
+      </div>
     </div>
-    <footer class = "footer">
+    <footer class="footer">
       <p>
         Copyright
         <a id="link" href="https://github.com/cyphyne">Cyphyne</a>
       </p>
     </footer>
+    <script src="script.js"></script>
 </body>
+</html>
