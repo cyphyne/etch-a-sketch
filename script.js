@@ -12,6 +12,8 @@ const sliderOutput = document.getElementById("size-value");
 const opacitySlider = document.getElementById("opacity-slider");
 const opacityOutput = document.getElementById("opacity-text");
  
+let currentColor = "black";
+ 
  
 // Slider and Opacity Value
 sliderOutput.innerHTML = `${gridSlider.value} x ${gridSlider.value}`;
@@ -35,6 +37,7 @@ const createGrid = (size) => {
      
     for (let i = 0; i < gridTotal; i++) {
         let square = document.createElement("div");
+        square.addEventListener("mouseover", drawGrid);
         square.style.backgroundColor = "white";
         container.insertAdjacentElement("beforeend", square);
      };
@@ -44,5 +47,18 @@ createGrid(16);
  
 const changeGrid = (input) => {
      createGrid(input);
+};
+ 
+ 
+// Draw Function
+ 
+const pickColor = (value) => {
+    currentColor = value;
+};
+ 
+pickColor(value);
+ 
+function drawGrid() {
+    this.style.backgroundColor = currentColor;
 };
 

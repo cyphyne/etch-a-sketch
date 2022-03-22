@@ -29,7 +29,10 @@
       <div id="color-selector">
         <p>Color Selector</p>
         <div id="cp-wrapper">
-          <input type="color" id="color-picker" name="head" value="#000000">
+        <input 
+            type="color" id="color-picker" name="head" value="#000000"
+            onchange="pickColor(this.value)"
+        />
         </div>
       </div>
       <div id="recent">
